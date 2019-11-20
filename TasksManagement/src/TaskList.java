@@ -1,8 +1,49 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class TaskList {
     private ArrayList<Task> taskArrayList = new ArrayList<>();
+
+
+    public HashMap<Type,ArrayList<Task>> sortTasksByType(){
+
+        HashMap<Type,ArrayList<Task>> sortedTasks = new HashMap<>();
+
+        ArrayList<Task> shortTaskArrayList = new ArrayList<>();
+        ArrayList<Task> longTaskArrayList = new ArrayList<>();
+        ArrayList<Task> delayedTaskArrayList = new ArrayList<>();
+        ArrayList<Task> irrelevantTaskArrayList = new ArrayList<>();
+        ArrayList<Task> doneTaskArrayList = new ArrayList<>();
+
+        for (Task task:taskArrayList) {
+            switch (task.getType()){
+                case SHORT:
+                    shortTaskArrayList.add(task);
+                    break;
+                case LONG:
+                    longTaskArrayList.add(task);
+                    break;
+                case DELAYED:
+                    delayedTaskArrayList.add(task);
+                    break;
+                case IRRELEVANT:
+                    irrelevantTaskArrayList.add(task);
+                    break;
+                case DONE:
+                    doneTaskArrayList.add(task);
+                    break;
+            }
+        }
+
+        sortedTasks.put(Type.SHORT,shortTaskArrayList);
+        sortedTasks.put(Type.LONG,longTaskArrayList);
+        sortedTasks.put(Type.DELAYED,delayedTaskArrayList);
+        sortedTasks.put(Type.IRRELEVANT,irrelevantTaskArrayList);
+        sortedTasks.put(Type.DONE,doneTaskArrayList);
+
+        return sortedTasks;
+    }
 
     public void addTask(Task task){
         taskArrayList.add(task);
@@ -56,8 +97,6 @@ public class TaskList {
                     .findAny().get()
                     .setDone(doneState);
     }
-
-
 
     public int indexOfTask(Task task){
         return taskArrayList.indexOf(task);
