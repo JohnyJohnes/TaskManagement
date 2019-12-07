@@ -1,7 +1,8 @@
 <component name="libraryTable">
   <library name="json-io-4.8.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../json-io-4.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/json-io-4.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/json-20190722.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

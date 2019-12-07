@@ -23,5 +23,7 @@ public class Main {
         }
         taskList.printAllTasks();
 
+        ImporterToFile.saveToTxt(taskList.getTaskArrayList());
+
     }
 }
