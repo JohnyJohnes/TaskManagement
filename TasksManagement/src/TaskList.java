@@ -103,4 +103,13 @@ public class TaskList {
         return taskArrayList.indexOf(task);
     }
 
+
+    public ArrayList<Task> getTaskArrayList() {
+        return taskArrayList;
+    }
+
+
+    public void setTaskArrayList(ArrayList<Task> taskArrayList) {
+        this.taskArrayList = taskArrayList;
+    }
 }

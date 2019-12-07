@@ -23,5 +23,7 @@ public class Main {
         }
         taskList.printAllTasks();
 
+        ImporterToFile.saveToYourFile(taskList.getTaskArrayList(),"TasksManagement/test.json");
+
     }
 }
