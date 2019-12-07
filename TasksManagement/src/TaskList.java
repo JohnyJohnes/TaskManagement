@@ -16,7 +16,7 @@ public class TaskList {
         ArrayList<Task> irrelevantTaskArrayList = new ArrayList<>();
         ArrayList<Task> doneTaskArrayList = new ArrayList<>();
 
-        for (Task task:taskArrayList) {
+        for (Task task : taskArrayList) {
             switch (task.getType()){
                 case SHORT:
                     shortTaskArrayList.add(task);
@@ -36,14 +36,15 @@ public class TaskList {
             }
         }
 
-        sortedTasks.put(Type.SHORT,shortTaskArrayList);
-        sortedTasks.put(Type.LONG,longTaskArrayList);
-        sortedTasks.put(Type.DELAYED,delayedTaskArrayList);
-        sortedTasks.put(Type.IRRELEVANT,irrelevantTaskArrayList);
-        sortedTasks.put(Type.DONE,doneTaskArrayList);
+        sortedTasks.put(Type.SHORT, shortTaskArrayList);
+        sortedTasks.put(Type.LONG, longTaskArrayList);
+        sortedTasks.put(Type.DELAYED, delayedTaskArrayList);
+        sortedTasks.put(Type.IRRELEVANT, irrelevantTaskArrayList);
+        sortedTasks.put(Type.DONE, doneTaskArrayList);
 
         return sortedTasks;
     }
+
 
     public void addTask(Task task){
         taskArrayList.add(task);
