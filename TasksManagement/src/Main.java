@@ -23,7 +23,14 @@ public class Main {
         }
         taskList.printAllTasks();
 
-        ImporterToFile.saveToTxt(taskList.getTaskArrayList());
+        ImporterToFile.saveToJson(taskList.getTaskArrayList());
+
+        System.out.println();
+        try {
+            System.out.println(FileReader.readFileAsString("TasksManagement/outputFiles/test.json"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }

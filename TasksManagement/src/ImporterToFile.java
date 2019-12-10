@@ -52,14 +52,16 @@ public class ImporterToFile {
 
     private static JSONObject taskArrayListToJSON(ArrayList<Task> tasks){
         JSONObject obj = new JSONObject();
-        JSONArray taskList = new JSONArray();
+        JSONArray jsonArrayList = new JSONArray();
         for (Task task : tasks) {
+            JSONArray taskList = new JSONArray();
             taskList.put("Name: "+task.getName());
             taskList.put("Type: "+task.getType().toString());
             taskList.put("State: "+task.isDone());
             taskList.put("Deadline: "+task.getDueDate().toString());
+            jsonArrayList.put("task:" + taskList);
         }
-        obj.put("Task List: ",taskList);
+        obj.put("Tasks: ",jsonArrayList);
         return obj;
     }
 }
