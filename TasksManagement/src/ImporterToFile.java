@@ -42,7 +42,7 @@ public class ImporterToFile {
 
         // try-with-resources statement based on post comment below :)
         try (FileWriter file = new FileWriter(filePath)) {
-            file.write(obj.toString());
+            file.write(obj.toString().replace("/\\/g", ""));
             System.out.println("Successfully Copied JSON Object to File...");
             System.out.println("\nJSON Object: " + obj);
         } catch (IOException e) {
@@ -59,6 +59,7 @@ public class ImporterToFile {
             taskList.put("Type: "+task.getType().toString());
             taskList.put("State: "+task.isDone());
             taskList.put("Deadline: "+task.getDueDate().toString());
+
             jsonArrayList.put("task:" + taskList);
         }
         obj.put("Tasks: ",jsonArrayList);
