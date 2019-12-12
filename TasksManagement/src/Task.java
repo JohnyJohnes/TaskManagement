@@ -1,3 +1,5 @@
+import org.json.JSONObject;
+
 import java.util.Date;
 
 enum Type{
@@ -51,6 +53,15 @@ public class Task {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public JSONObject toJSON(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name:",name);
+        jsonObject.put("type:",type);
+        jsonObject.put("deadline",dueDate);
+        jsonObject.put("state",isDone);
+        return jsonObject;
     }
 
     @Override

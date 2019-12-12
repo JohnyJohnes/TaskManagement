@@ -54,15 +54,15 @@ public class ImporterToFile {
         JSONObject obj = new JSONObject();
         JSONArray jsonArrayList = new JSONArray();
         for (Task task : tasks) {
-            JSONArray taskList = new JSONArray();
-            taskList.put("Name: "+task.getName());
-            taskList.put("Type: "+task.getType().toString());
-            taskList.put("State: "+task.isDone());
-            taskList.put("Deadline: "+task.getDueDate().toString());
+//            JSONArray taskList = new JSONArray();
+//            taskList.put("name: "+task.getName());
+//            taskList.put("type: "+task.getType().toString());
+//            taskList.put("state: "+task.isDone());
+//            taskList.put("deadline: "+task.getDueDate().toString());
 
-            jsonArrayList.put("task:" + taskList);
+            jsonArrayList.put(task.toJSON());
         }
-        obj.put("Tasks: ",jsonArrayList);
+        obj.put("tasks",jsonArrayList);
         return obj;
     }
 }
