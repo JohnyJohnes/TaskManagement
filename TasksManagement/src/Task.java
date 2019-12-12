@@ -57,8 +57,8 @@ public class Task {
 
     public JSONObject toJSON(){
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("name:",name);
-        jsonObject.put("type:",type);
+        jsonObject.put("name",name);
+        jsonObject.put("type",type);
         jsonObject.put("deadline",dueDate);
         jsonObject.put("state",isDone);
         return jsonObject;
