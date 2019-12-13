@@ -21,6 +21,34 @@ public class Task {
 //        this.tillDueDate = Duration.between(LocalTime.now(),LocalTime);
     }
 
+    public Task(String name, String type, Date dueDate) {
+        this.name = name;
+        this.type = stringToType(type);
+        this.dueDate = dueDate;
+//        this.tillDueDate.ofSeconds()//(dueDate.getTime()-System.currentTimeMillis())/100);
+//        this.tillDueDate = Duration.between(LocalTime.now(),LocalTime);
+    }
+
+    public Type stringToType(String type){
+        switch (type){
+            case "SHORT":
+                return Type.SHORT;
+
+            case "LONG":
+                return Type.LONG;
+
+            case "DELAYED":
+                return Type.DELAYED;
+
+            case "IRRELEVANT":
+                return Type.IRRELEVANT;
+
+            case "DONE":
+                return Type.DONE;
+        }
+        return null;
+    }
+
     public String getName() {
         return name;
     }

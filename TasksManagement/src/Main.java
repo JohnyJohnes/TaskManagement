@@ -27,10 +27,15 @@ public class Main {
 
         System.out.println();
         try {
-            System.out.println(FileReader.readFileAsString("TasksManagement/outputFiles/test.txt"));
+            System.out.println(FileReader.readFileToString("TasksManagement/outputFiles/test.txt"));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        try {
+            TaskParser.taskJSONParser(FileReader.readFileToJSON("TasksManagement/outputFiles/test.json"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
