@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ed89324-57d8-419d-a213-e039431a8f82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TasksManagement/src/TaskParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TasksManagement/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManagement/src/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManagement/src/JSONParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManagement/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManagement/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TasksManagement/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/TasksManagement/src/Task.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TasksManagement/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="101" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="101" />
+            <state relative-caret-position="439">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TasksManagement/src/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="315">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TasksManagement/src/TaskParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,10 +128,10 @@
         <option value="$PROJECT_DIR$/TasksManagement/src/ImporterToFile.java" />
         <option value="$PROJECT_DIR$/TasksManagement/src/JSONParser.java" />
         <option value="$PROJECT_DIR$/TasksManagement/src/Parser.java" />
-        <option value="$PROJECT_DIR$/TasksManagement/src/FileReader.java" />
         <option value="$PROJECT_DIR$/TasksManagement/src/Main.java" />
         <option value="$PROJECT_DIR$/TasksManagement/src/Task.java" />
         <option value="$PROJECT_DIR$/TasksManagement/src/TaskParser.java" />
+        <option value="$PROJECT_DIR$/TasksManagement/src/FileReader.java" />
       </list>
     </option>
   </component>
@@ -260,18 +255,18 @@
       <workItem from="1576012180419" duration="272000" />
       <workItem from="1576094808525" duration="157000" />
       <workItem from="1576155214713" duration="5041000" />
-      <workItem from="1576252630341" duration="1059000" />
+      <workItem from="1576252630341" duration="1566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20199000" />
+    <option name="totallyTimeSpent" value="20706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2789988" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2789988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,8 +275,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32959184" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32959184" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -305,8 +300,31 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/TasksManagement/src/TaskParser.java</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/TasksManagement/src/Main.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>data.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>jsonObject.keys()</expression-string>
         <language-id>JAVA</language-id>
@@ -437,26 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TasksManagement/src/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TasksManagement/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="101" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TasksManagement/src/TaskList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -467,10 +465,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/json-20190722.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TasksManagement/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TasksManagement/src/TaskParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TasksManagement/src/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
