@@ -3,11 +3,12 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 public class TaskParser {
 
-    public static TaskList taskJSONParser(JSONObject jsonObject){
-        TaskList taskList = new TaskList();
+    public static ArrayList<Task> taskJSONParser(JSONObject jsonObject){
+        ArrayList<Task> taskList = new ArrayList<>();
         JSONArray jsonArray = (JSONArray) jsonObject.get("tasks");
         for (Object jsonTask : jsonArray){
             try {
@@ -16,12 +17,12 @@ public class TaskParser {
                                 .getString("name"),
                         ((JSONObject) jsonTask)
                                 .getString("type"),
-                        new SimpleDateFormat("dd-M-yyyy hh:mm:ss").
+                        new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").
                                 parse(
                                         ((JSONObject) jsonTask)
                                                 .getString("deadline")));
 
-                taskList.addTask(task);
+                taskList.add(task);
 
             } catch (ParseException e) {
                 e.printStackTrace();

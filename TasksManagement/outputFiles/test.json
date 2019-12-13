@@ -1,1 +1,1 @@
-{"tasks":[{"name:":"test","type:":"SHORT","state":false,"deadline":"Tue Aug 31 10:20:56 CEST 1982"},{"name:":"test1","type:":"SHORT","state":false,"deadline":"Tue Aug 31 10:20:56 CEST 1982"},{"name:":"test2","type:":"SHORT","state":false,"deadline":"Tue Aug 31 10:20:56 CEST 1982"}]}
+{"tasks":[{"name":"test","state":false,"type":"SHORT","deadline":"Tue Aug 31 10:20:56 CEST 1982"},{"name":"test1","state":false,"type":"SHORT","deadline":"Tue Aug 31 10:20:56 CEST 1982"},{"name":"test2","state":false,"type":"SHORT","deadline":"Tue Aug 31 10:20:56 CEST 1982"}]}

@@ -1,29 +1,30 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
         TaskList taskList = new TaskList();
         try {
-            taskList.addTask(new Task("test", Type.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+            taskList.addTask(new Task("test", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
-            taskList.addTask(new Task("test1", Type.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+            taskList.addTask(new Task("test1", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
-            taskList.addTask(new Task("test2", Type.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+            taskList.addTask(new Task("test2", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
         } catch (ParseException e) {
             e.printStackTrace();
         }
         taskList.printAllTasks();
         try {
-            taskList.removeTask(new Task("test2", Type.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+            taskList.removeTask(new Task("test2", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
         } catch (ParseException e) {
             e.printStackTrace();
         }
         taskList.printAllTasks();
 
-        ImporterToFile.saveToTxt(taskList.getTaskArrayList());
+        ImporterToFile.saveToJson(taskList.getTaskArrayList());
 
         System.out.println();
         try {
@@ -31,11 +32,19 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        taskList = new TaskList();
+        System.out.println("\n\n\n\n");
+        taskList.printAllTasks();
+        ArrayList test = new ArrayList();
         try {
-            TaskParser.taskJSONParser(FileReader.readFileToJSON("TasksManagement/outputFiles/test.json"));
+            test = TaskParser.taskJSONParser(FileReader.readFileToJSON("TasksManagement/outputFiles/test.json"));
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        taskList.setTaskArrayList(test);
+        System.out.println("\n\n\n\n");
+        taskList.printAllTasks();
+
     }
 }

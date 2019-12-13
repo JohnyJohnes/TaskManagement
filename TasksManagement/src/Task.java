@@ -2,20 +2,20 @@ import org.json.JSONObject;
 
 import java.util.Date;
 
-enum Type{
+enum TaskType {
     SHORT, LONG, DELAYED, IRRELEVANT, DONE
 }
 
 public class Task {
     private String name;
-    private Type type;
+    private TaskType taskType;
     private Date dueDate;
     private boolean isDone = false;
 //    private Duration tillDueDate;
 
-    public Task(String name, Type type, Date dueDate) {
+    public Task(String name, TaskType taskType, Date dueDate) {
         this.name = name;
-        this.type = type;
+        this.taskType = taskType;
         this.dueDate = dueDate;
 //        this.tillDueDate.ofSeconds()//(dueDate.getTime()-System.currentTimeMillis())/100);
 //        this.tillDueDate = Duration.between(LocalTime.now(),LocalTime);
@@ -23,28 +23,28 @@ public class Task {
 
     public Task(String name, String type, Date dueDate) {
         this.name = name;
-        this.type = stringToType(type);
+        this.taskType = stringToType(type);
         this.dueDate = dueDate;
 //        this.tillDueDate.ofSeconds()//(dueDate.getTime()-System.currentTimeMillis())/100);
 //        this.tillDueDate = Duration.between(LocalTime.now(),LocalTime);
     }
 
-    public Type stringToType(String type){
+    public TaskType stringToType(String type){
         switch (type){
             case "SHORT":
-                return Type.SHORT;
+                return TaskType.SHORT;
 
             case "LONG":
-                return Type.LONG;
+                return TaskType.LONG;
 
             case "DELAYED":
-                return Type.DELAYED;
+                return TaskType.DELAYED;
 
             case "IRRELEVANT":
-                return Type.IRRELEVANT;
+                return TaskType.IRRELEVANT;
 
             case "DONE":
-                return Type.DONE;
+                return TaskType.DONE;
         }
         return null;
     }
@@ -75,18 +75,18 @@ public class Task {
         isDone = done;
     }
 
-    public Type getType() {
-        return type;
+    public TaskType getTaskType() {
+        return taskType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setTaskType(TaskType taskType) {
+        this.taskType = taskType;
     }
 
     public JSONObject toJSON(){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name",name);
-        jsonObject.put("type",type);
+        jsonObject.put("type", taskType);
         jsonObject.put("deadline",dueDate);
         jsonObject.put("state",isDone);
         return jsonObject;
@@ -96,7 +96,7 @@ public class Task {
     public String toString() {
         return "Task{" +
                 "name='" + name + '\'' +
-                ", type=" + type +
+                ", taskType=" + taskType +
                 ", dueDate=" + dueDate +
                 ", isDone=" + isDone +
                 '}';

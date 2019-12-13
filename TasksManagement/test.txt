@@ -1,1 +1,1 @@
-{"Task List: ":["Name: test","Type: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982","Name: test1","Type: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982","Name: test2","Type: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982"]}
+{"Task List: ":["Name: test","TaskType: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982","Name: test1","TaskType: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982","Name: test2","TaskType: SHORT","State: false","Deadline: Tue Aug 31 10:20:56 CEST 1982"]}

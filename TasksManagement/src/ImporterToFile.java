@@ -56,7 +56,7 @@ public class ImporterToFile {
         for (Task task : tasks) {
 //            JSONArray taskList = new JSONArray();
 //            taskList.put("name: "+task.getName());
-//            taskList.put("type: "+task.getType().toString());
+//            taskList.put("type: "+task.getTaskType().toString());
 //            taskList.put("state: "+task.isDone());
 //            taskList.put("deadline: "+task.getDueDate().toString());
 

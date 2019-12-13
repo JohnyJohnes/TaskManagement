@@ -6,9 +6,9 @@ public class TaskList {
     private ArrayList<Task> taskArrayList = new ArrayList<>();
 
 
-    public HashMap<Type,ArrayList<Task>> sortTasksByType(){
+    public HashMap<TaskType,ArrayList<Task>> sortTasksByType(){
 
-        HashMap<Type,ArrayList<Task>> sortedTasks = new HashMap<>();
+        HashMap<TaskType,ArrayList<Task>> sortedTasks = new HashMap<>();
 
         ArrayList<Task> shortTaskArrayList = new ArrayList<>();
         ArrayList<Task> longTaskArrayList = new ArrayList<>();
@@ -17,7 +17,7 @@ public class TaskList {
         ArrayList<Task> doneTaskArrayList = new ArrayList<>();
 
         for (Task task : taskArrayList) {
-            switch (task.getType()){
+            switch (task.getTaskType()){
                 case SHORT:
                     shortTaskArrayList.add(task);
                     break;
@@ -36,11 +36,11 @@ public class TaskList {
             }
         }
 
-        sortedTasks.put(Type.SHORT, shortTaskArrayList);
-        sortedTasks.put(Type.LONG, longTaskArrayList);
-        sortedTasks.put(Type.DELAYED, delayedTaskArrayList);
-        sortedTasks.put(Type.IRRELEVANT, irrelevantTaskArrayList);
-        sortedTasks.put(Type.DONE, doneTaskArrayList);
+        sortedTasks.put(TaskType.SHORT, shortTaskArrayList);
+        sortedTasks.put(TaskType.LONG, longTaskArrayList);
+        sortedTasks.put(TaskType.DELAYED, delayedTaskArrayList);
+        sortedTasks.put(TaskType.IRRELEVANT, irrelevantTaskArrayList);
+        sortedTasks.put(TaskType.DONE, doneTaskArrayList);
 
         return sortedTasks;
     }
@@ -75,12 +75,12 @@ public class TaskList {
     }
 
 
-    public void changeTask(Task task, Type type){
+    public void changeTask(Task task, TaskType taskType){
         if (taskArrayList.contains(task))
             taskArrayList.stream().filter(
-                    t->(t.getType().equals(type)) && (t.equals(task)))
+                    t->(t.getTaskType().equals(taskType)) && (t.equals(task)))
                     .findAny().get()
-                    .setType(type);
+                    .setTaskType(taskType);
     }
 
     public void changeTask(Task task, String name){
