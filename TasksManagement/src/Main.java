@@ -9,7 +9,7 @@ public class Main {
             taskList.addTask(new Task("test", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
             taskList.addTask(new Task("test1", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
-                    .parse("31-08-1982 10:20:56")));
+                    .parse("31-08-1982 10:20:57")));
             taskList.addTask(new Task("aTest2", TaskType.SHORT, new SimpleDateFormat("dd-M-yyyy hh:mm:ss")
                     .parse("31-08-1982 10:20:56")));
         } catch (ParseException e) {
@@ -46,7 +46,7 @@ public class Main {
         System.out.println("\n\n\n\n");
         taskList.printAllTasks();
 
-        SortTasks.sortByName(taskList.getTaskArrayList());
+        SortTasks.sortByDate(taskList.getTaskArrayList());
         taskList.printAllTasks();
     }
 }

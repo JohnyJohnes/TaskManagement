@@ -12,4 +12,13 @@ public class SortTasks {
             }
         });
     }
+
+    public static void sortByDate(ArrayList<Task> tasks){
+        Collections.sort(tasks, new Comparator<Task>() {
+            @Override
+            public int compare(Task o1, Task o2) {
+                return o1.getDueDate().compareTo(o2.getDueDate());
+            }
+        });
+    }
 }
